@@ -63,5 +63,5 @@ if st.button("Predict Burnout Risk"):
 
     input_df = pd.DataFrame([data])
     prediction = model.predict(input_df)[0]
-    labels = {0: "🟢 Low", 1: "🟡 Medium", 2: "🔴 High"}
+    labels = {"Low": "🟢 Low", "Medium": "🟡 Medium", "High": "🔴 High"}
     st.success(f"Burnout Risk Level: {labels[prediction]}")
